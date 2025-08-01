@@ -107,7 +107,7 @@ def show_detection():
         
         with col1:
             st.subheader("Gambar Input")
-            st.image(image, caption="Gambar yang diupload", use_column_width=True)
+            st.image(image, caption="Gambar yang diupload", use_container_width=True)
         
         with col2:
             st.subheader("Hasil Deteksi")
