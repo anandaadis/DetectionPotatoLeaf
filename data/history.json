@@ -1,0 +1,226 @@
+[
+    {
+        "username": "asd",
+        "prediction": "Late Blight",
+        "confidence": 77.96379923820496,
+        "timestamp": "2025-06-30T12:48:37.114085",
+        "image_path": "uploads/asd_20250630_124837.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Potato___healthy",
+        "confidence": 77.38938331604004,
+        "timestamp": "2025-06-30T12:57:16.319967",
+        "image_path": "uploads/asd_20250630_125716.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Potato___healthy",
+        "confidence": 72.42267727851868,
+        "timestamp": "2025-06-30T13:01:32.972599",
+        "image_path": "uploads/asd_20250630_130132.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Potato___healthy",
+        "confidence": 99.99032020568848,
+        "timestamp": "2025-06-30T13:19:25.811007",
+        "image_path": "uploads/asd_20250630_131925.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Potato___Early_blight",
+        "confidence": 61.61689758300781,
+        "timestamp": "2025-06-30T13:21:50.792600",
+        "image_path": "uploads/asd_20250630_132150.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Potato___Early_blight",
+        "confidence": 99.9755322933197,
+        "timestamp": "2025-06-30T13:23:34.550379",
+        "image_path": "uploads/asd_20250630_132334.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Potato___healthy",
+        "confidence": 99.98038411140442,
+        "timestamp": "2025-06-30T13:24:54.872810",
+        "image_path": "uploads/asd_20250630_132454.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Potato___Early_blight",
+        "confidence": 99.70056414604187,
+        "timestamp": "2025-07-01T14:26:52.600209",
+        "image_path": "uploads/asd_20250701_142652.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Potato___Late_blight",
+        "confidence": 99.98953342437744,
+        "timestamp": "2025-07-01T14:27:39.219653",
+        "image_path": "uploads/asd_20250701_142739.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Late Blight",
+        "confidence": 99.71193075180054,
+        "timestamp": "2025-07-01T14:44:58.216196",
+        "image_path": "uploads/asd_20250701_144458.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Late Blight",
+        "confidence": 99.9426007270813,
+        "timestamp": "2025-07-01T14:45:34.434574",
+        "image_path": "uploads/asd_20250701_144534.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Late Blight",
+        "confidence": 99.93731379508972,
+        "timestamp": "2025-07-01T14:49:32.633148",
+        "image_path": "uploads/asd_20250701_144932.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Late Blight",
+        "confidence": 99.94387030601501,
+        "timestamp": "2025-07-01T14:57:38.599382",
+        "image_path": "uploads/asd_20250701_145738.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Healthy",
+        "confidence": 99.98038411140442,
+        "timestamp": "2025-07-01T15:18:39.120481",
+        "image_path": "uploads/asd_20250701_151839.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Early Blight",
+        "confidence": 98.45037460327148,
+        "timestamp": "2025-07-01T15:21:18.119559",
+        "image_path": "uploads/asd_20250701_152118.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Late Blight",
+        "confidence": 99.98227953910828,
+        "timestamp": "2025-07-01T15:22:06.499988",
+        "image_path": "uploads/asd_20250701_152206.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Early Blight",
+        "confidence": 69.10214424133301,
+        "timestamp": "2025-07-01T15:24:58.968269",
+        "image_path": "uploads/asd_20250701_152458.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Healthy",
+        "confidence": 99.92545247077942,
+        "timestamp": "2025-07-01T15:33:15.865274",
+        "image_path": "uploads/asd_20250701_153315.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Early Blight",
+        "confidence": 47.12249040603638,
+        "timestamp": "2025-07-01T15:37:33.350837",
+        "image_path": "uploads/asd_20250701_153733.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Early Blight",
+        "confidence": 47.12249040603638,
+        "timestamp": "2025-07-01T15:38:02.052203",
+        "image_path": "uploads/asd_20250701_153802.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Early Blight",
+        "confidence": 99.90893602371216,
+        "timestamp": "2025-07-01T15:38:21.446825",
+        "image_path": "uploads/asd_20250701_153821.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Late Blight",
+        "confidence": 99.58024621009827,
+        "timestamp": "2025-07-01T15:44:41.335335",
+        "image_path": "uploads/asd_20250701_154441.jpg"
+    },
+    {
+        "username": "qwerty",
+        "prediction": "Healthy",
+        "confidence": 99.99992847442627,
+        "timestamp": "2025-07-01T16:50:34.683000",
+        "image_path": "uploads/qwerty_20250701_165034.jpg"
+    },
+    {
+        "username": "qwerty",
+        "prediction": "Early Blight",
+        "confidence": 99.9755322933197,
+        "timestamp": "2025-07-01T16:53:08.728307",
+        "image_path": "uploads/qwerty_20250701_165308.jpg"
+    },
+    {
+        "username": "qwerty",
+        "prediction": "Late Blight",
+        "confidence": 99.59515333175659,
+        "timestamp": "2025-07-01T19:38:52.740031",
+        "image_path": "uploads/qwerty_20250701_193852.jpg"
+    },
+    {
+        "username": "qwerty",
+        "prediction": "Late Blight",
+        "confidence": 98.97699356079102,
+        "timestamp": "2025-07-01T19:42:57.048882",
+        "image_path": "uploads/qwerty_20250701_194257.jpg"
+    },
+    {
+        "username": "qwerty",
+        "prediction": "Healthy",
+        "confidence": 99.42795038223267,
+        "timestamp": "2025-07-01T19:58:09.209662",
+        "image_path": "uploads/qwerty_20250701_195809.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Early Blight",
+        "confidence": 96.56240940093994,
+        "timestamp": "2025-07-21T22:43:10.822982",
+        "image_path": "uploads/asd_20250721_224310.jpg"
+    },
+    {
+        "username": "asd",
+        "prediction": "Healthy",
+        "confidence": 99.7785210609436,
+        "timestamp": "2025-07-22T12:10:30.196926",
+        "image_path": "uploads/asd_20250722_121030.jpg"
+    },
+    {
+        "username": "Putra",
+        "prediction": "Early Blight",
+        "confidence": 99.94301199913025,
+        "timestamp": "2025-07-22T12:26:16.015655",
+        "image_path": "uploads/Putra_20250722_122616.jpg"
+    },
+    {
+        "username": "Putra",
+        "prediction": "Healthy",
+        "confidence": 99.60734844207764,
+        "timestamp": "2025-07-22T12:28:17.754604",
+        "image_path": "uploads/Putra_20250722_122817.jpg"
+    },
+    {
+        "username": "Putra",
+        "prediction": "Late Blight",
+        "confidence": 99.9998688697815,
+        "timestamp": "2025-07-22T12:28:59.269362",
+        "image_path": "uploads/Putra_20250722_122859.jpg"
+    }
+]
