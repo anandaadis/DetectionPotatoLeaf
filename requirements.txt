@@ -1,7 +1,8 @@
 streamlit
-tensorflow
-keras
-pillow
-numpy
 pandas
+numpy
+tensorflow==2.16.1
 plotly
+pillow
+opencv-python-headless
+
