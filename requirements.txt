@@ -1,8 +1,8 @@
 streamlit
 pandas
 numpy
-tensorflow==2.16.1
-plotly
+tensorflow==2.15.0
+keras==2.15.0
 pillow
 opencv-python-headless
-
+plotly
