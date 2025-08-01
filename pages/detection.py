@@ -101,7 +101,7 @@ def show_detection():
     
     if uploaded_file is not None:
         # Tampilkan gambar yang diupload
-        image = Image.open(uploaded_file)
+        image = Image.open(uploaded_file).convert('RGB')
         
         col1, col2 = st.columns([1, 1])
         
