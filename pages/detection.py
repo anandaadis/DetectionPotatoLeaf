@@ -5,7 +5,9 @@ from PIL import Image
 import os
 from datetime import datetime, timezone, timedelta
 import json
-import pytz
+
+# Timezone Indonesia (UTC+7)
+WIB = timezone(timedelta(hours=7))
 
 def load_model():
     """Load model keras"""
@@ -66,14 +68,13 @@ def save_detection_history(username, prediction, confidence, image_path):
         history = []
     
     # Add new detection
-    indonesia_tz = pytz.timezone('Asia/Jakarta')
-    now_indonesia = datetime.now(indonesia_tz)
+    now_wib = datetime.now(WIB)
     
     new_detection = {
         'username': username,
         'prediction': prediction,
         'confidence': confidence,
-        'timestamp': now_indonesia.isoformat(),
+        'timestamp': now_wib.isoformat(),
         'image_path': image_path
     }
     
