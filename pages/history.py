@@ -4,6 +4,7 @@ import os
 import pandas as pd
 from datetime import datetime
 import plotly.express as px
+import pytz
 
 def load_history():
     """Load riwayat deteksi dari file JSON"""
@@ -13,10 +14,12 @@ def load_history():
     return []
 
 def format_timestamp(timestamp_str):
-    """Format timestamp untuk tampilan yang lebih baik"""
+    """Format timestamp untuk tampilan yang lebih baik dengan timezone Indonesia"""
     try:
-        dt = datetime.fromisoformat(timestamp_str)
-        return dt.strftime("%d/%m/%Y %H:%M")
+        dt = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))
+        indonesia_tz = pytz.timezone('Asia/Jakarta')
+        dt_indonesia = dt.replace(tzinfo=pytz.UTC).astimezone(indonesia_tz)
+        return dt_indonesia.strftime("%d/%m/%Y %H:%M WIB")
     except:
         return timestamp_str
 
