@@ -182,15 +182,4 @@ def show_history():
                 # Progress bar confidence
                 st.progress(item['confidence'] / 100)
     
-    # Export data
-    if st.button("📥 Export Riwayat ke CSV"):
-        df_export = pd.DataFrame(filtered_history)
-        if len(df_export) > 0:
-            df_export['formatted_timestamp'] = df_export['timestamp'].apply(format_timestamp)
-            csv = df_export.to_csv(index=False)
-            st.download_button(
-                label="Download CSV",
-                data=csv,
-                file_name=f"riwayat_deteksi_{st.session_state.username}.csv",
-                mime="text/csv"
-            )
+    
