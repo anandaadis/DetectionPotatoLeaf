@@ -181,5 +181,4 @@ def show_history():
                 
                 # Progress bar confidence
                 st.progress(item['confidence'] / 100)
-    
-    
+                
