@@ -132,13 +132,13 @@ def show_detection():
                         image.save(image_path)
                         
                         # Tampilkan hasil dengan formatting yang benar
-                        if prediction == "healthy":
-                            st.success(f"🌿 **Hasil: {prediction.title()}**")
+                        if "healthy" in prediction.lower():
+                            st.success(f"🌿 **Hasil: {formatted_prediction}**")
                             st.balloons()
-                        elif prediction == "Early blight":
-                            st.warning(f"⚠️ **Hasil: {prediction}**")
+                        elif "early" in prediction.lower():
+                            st.warning(f"⚠️ **Hasil: {formatted_prediction}**")
                         else:  # Late blight
-                            st.error(f"🚨 **Hasil: {prediction}**")
+                            st.error(f"🚨 **Hasil: {formatted_prediction}**")
                         
                         st.write(f"**Confidence Score:** {confidence:.2f}%")
                         
