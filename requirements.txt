@@ -6,5 +6,7 @@ pandas
 matplotlib
 scikit-learn
 plotly
+pytz
+
 
 
