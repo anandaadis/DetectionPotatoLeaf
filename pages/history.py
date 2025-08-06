@@ -4,7 +4,9 @@ import os
 import pandas as pd
 from datetime import datetime, timezone, timedelta
 import plotly.express as px
-import pytz
+
+# Timezone Indonesia (UTC+7)
+WIB = timezone(timedelta(hours=7))
 
 def load_history():
     """Load riwayat deteksi dari file JSON"""
@@ -16,11 +18,27 @@ def load_history():
 def format_timestamp(timestamp_str):
     """Format timestamp untuk tampilan yang lebih baik dengan timezone Indonesia"""
     try:
-        dt = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))
-        indonesia_tz = pytz.timezone('Asia/Jakarta')
-        dt_indonesia = dt.replace(tzinfo=pytz.UTC).astimezone(indonesia_tz)
-        return dt_indonesia.strftime("%d/%m/%Y %H:%M WIB")
-    except:
+        # Parse timestamp
+        if timestamp_str.endswith('Z'):
+            # UTC timestamp
+            dt = datetime.fromisoformat(timestamp_str.replace('Z', '+00:00'))
+        elif '+' in timestamp_str or '-' in timestamp_str[-6:]:
+            # Timestamp dengan timezone
+            dt = datetime.fromisoformat(timestamp_str)
+        else:
+            # Timestamp tanpa timezone, anggap sebagai WIB
+            dt = datetime.fromisoformat(timestamp_str)
+            dt = dt.replace(tzinfo=WIB)
+        
+        # Convert ke WIB jika belum
+        if dt.tzinfo != WIB:
+            dt_wib = dt.astimezone(WIB)
+        else:
+            dt_wib = dt
+            
+        return dt_wib.strftime("%d/%m/%Y %H:%M WIB")
+    except Exception as e:
+        # Fallback jika parsing gagal
         return timestamp_str
 
 def show_history():
@@ -44,15 +62,15 @@ def show_history():
         st.metric("Total Deteksi", len(user_history))
     
     with col2:
-        healthy_count = len([h for h in user_history if h['prediction'] == 'Healthy'])
+        healthy_count = len([h for h in user_history if 'healthy' in h['prediction'].lower()])
         st.metric("Healthy Leaf", healthy_count)
     
     with col3:
-        early_blight_count = len([h for h in user_history if h['prediction'] == 'Early Blight'])
+        early_blight_count = len([h for h in user_history if 'early' in h['prediction'].lower()])
         st.metric("Early Blight", early_blight_count)
     
     with col4:
-        late_blight_count = len([h for h in user_history if h['prediction'] == 'Late Blight'])
+        late_blight_count = len([h for h in user_history if 'late' in h['prediction'].lower()])
         st.metric("Late Blight", late_blight_count)
     
     # Grafik distribusi hasil
@@ -98,8 +116,13 @@ def show_history():
     filtered_history = user_history.copy()
     
     if filter_prediction != "Semua":
-        filtered_history = [h for h in filtered_history if h['prediction'] == filter_prediction]
-    
+    if filter_prediction == "Healthy":
+        filtered_history = [h for h in filtered_history if 'healthy' in h['prediction'].lower()]
+    elif filter_prediction == "Early Blight":
+        filtered_history = [h for h in filtered_history if 'early' in h['prediction'].lower()]
+    elif filter_prediction == "Late Blight":
+        filtered_history = [h for h in filtered_history if 'late' in h['prediction'].lower()]
+        
     # Apply sorting
     if sort_order == "Terbaru":
         filtered_history.sort(key=lambda x: x['timestamp'], reverse=True)
@@ -128,10 +151,11 @@ def show_history():
         page_history = filtered_history[start_idx:end_idx]
     else:
         page_history = filtered_history
+        start_idx = 0
     
     # Tampilkan setiap item riwayat
     for i, item in enumerate(page_history):
-        with st.expander(f"Deteksi #{start_idx + i + 1 if 'start_idx' in locals() else i + 1} - {item['prediction']} ({format_timestamp(item['timestamp'])})"):
+        with st.expander(f"Deteksi #{start_idx + i + 1} - {item['prediction']} ({format_timestamp(item['timestamp'])})"):
             col1, col2 = st.columns([1, 2])
             
             with col1:
@@ -145,11 +169,11 @@ def show_history():
             
             with col2:
                 # Status badge
-                if item['prediction'] == 'Healthy':
+                if 'healthy' in item['prediction'].lower():
                     st.success(f"✅ **{item['prediction']}**")
-                elif item['prediction'] == 'Early Blight':
+                elif 'early' in item['prediction'].lower():
                     st.warning(f"⚠️ **{item['prediction']}**")
-                else:
+                else:  # Late blight
                     st.error(f"🚨 **{item['prediction']}**")
                 
                 st.write(f"**Confidence:** {item['confidence']:.2f}%")
