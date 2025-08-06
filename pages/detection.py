@@ -69,7 +69,7 @@ def save_detection_history(username, prediction, confidence, image_path):
         'username': username,
         'prediction': prediction,
         'confidence': confidence,
-        'timestamp': datetime.now().isoformat(),
+        'timestamp': now_indonesia.isoformat(),
         'image_path': image_path
     }
     
