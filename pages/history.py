@@ -117,11 +117,11 @@ def show_history():
     
     if filter_prediction != "Semua":
         if filter_prediction == "Healthy":
-        filtered_history = [h for h in filtered_history if 'healthy' in h['prediction'].lower()]
+           filtered_history = [h for h in filtered_history if 'healthy' in h['prediction'].lower()]
         elif filter_prediction == "Early Blight":
-        filtered_history = [h for h in filtered_history if 'early' in h['prediction'].lower()]
+           filtered_history = [h for h in filtered_history if 'early' in h['prediction'].lower()]
         elif filter_prediction == "Late Blight":
-        filtered_history = [h for h in filtered_history if 'late' in h['prediction'].lower()]
+           filtered_history = [h for h in filtered_history if 'late' in h['prediction'].lower()]
         
     # Apply sorting
     if sort_order == "Terbaru":
