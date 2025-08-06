@@ -3,8 +3,9 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import os
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 import json
+import pytz
 
 def load_model():
     """Load model keras"""
@@ -65,6 +66,9 @@ def save_detection_history(username, prediction, confidence, image_path):
         history = []
     
     # Add new detection
+    indonesia_tz = pytz.timezone('Asia/Jakarta')
+    now_indonesia = datetime.now(indonesia_tz)
+    
     new_detection = {
         'username': username,
         'prediction': prediction,
